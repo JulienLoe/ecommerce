@@ -1,0 +1,150 @@
+.cartContainerOrder{
+    display: grid;
+    height: 93vh;
+    grid-template-columns: repeat(1, 1fr 1fr 1fr);
+    grid-auto-columns: auto;
+    grid-auto-rows: 200px;
+    margin: 0px 0px 50px 50px;
+    padding-top: 50px;
+    gap: 15px;
+    overflow-y: scroll;
+    padding-right: 50px;
+    font-family: 'Syne Mono', monospace;
+}
+
+.cartOrder{
+    display: flex;
+    gap: 40px;
+    border-radius: 15px;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    border-bottom: 3px solid black;
+    background-color: rgba($color: rgb(33, 29, 29), $alpha: 0.4);
+}
+
+.containerImgOrder{
+    width: 150px;
+    height: 100%;
+    padding: 10px;
+}
+
+.containerImgOrder img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.calculateCart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.userOrderDiv{
+    display: flex;
+    width: 100%;
+    background-color: rgba($color: rgb(188, 118, 43), $alpha: 1);
+    border-radius: 100px ;
+}
+
+.addressDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: rgba($color: rgb(188, 118, 43), $alpha: 0.6);
+    border: 3px solid black;
+    border-radius: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 10px;
+}
+
+.paraOrder{
+    margin-bottom: 4px;
+}
+
+.addressImgDiv{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+// .numberArticle{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background-color: rgb(143, 139, 139);
+//     width: 60%;
+//     height: 10%;
+//     margin-top: 15px;
+//     border-radius: 50px;
+//     color: white;
+//     font-size: 20px;
+//     font-weight: 300;
+// }
+
+.shipping{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color: rgb(188, 118, 43), $alpha: 0.6);
+    width: 90%;
+    height: 20%;
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    border: 1px black solid;
+    border-bottom: 0px;
+}
+
+.tva{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color: rgb(188, 118, 43), $alpha: 0.6);
+    width: 90%;
+    height: 20%;
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    border: 1px black solid;
+    border-bottom: 0px;
+    border-bottom: 0px;
+}
+
+.totalPriceOrder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color: rgb(188, 118, 43), $alpha: 0.6);
+    width: 90%;
+    height: 20%;
+    border: 1px black solid;
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.btnOrderValidation{
+    background-color: red;
+}
+
+.btnOrderDiv{
+    display: flex;
+    justify-content: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}

@@ -1,0 +1,48 @@
+.container{
+    position: absolute;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.loader{
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 20px;
+    border-radius: 5%;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: calc(0.2s * var(--load));
+    animation-name: rotate;
+}
+
+.container .wrapperLoader p{
+    width: 200px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 400;
+    color: black;
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.bubble{
+    position: absolute;
+    border-radius: 50%;
+    width: calc(-3px * var(--load));
+    height: calc(-3px * var(--load));
+    opacity: calc(-0.3 * var(--load));
+    background-color: black;
+}

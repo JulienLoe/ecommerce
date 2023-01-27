@@ -1,0 +1,121 @@
+.cartContainer{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(1, 1fr 1fr 1fr);
+    grid-auto-rows: 300px;
+    margin: 0px 0px 50px 50px;
+    padding-top: 100px;
+    gap: 15px;
+    overflow-y: scroll;
+    padding-right: 50px;
+}
+
+.cart{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    border-bottom: 3px solid black;
+    background-color: rgba($color: rgb(188, 118, 43), $alpha: 0.6);
+}
+
+.containerImg{
+    width: 150px;
+    height: 90%;
+    padding: 10px;
+}
+
+.containerImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.validationCart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    // background-color: rgb(223, 210, 210);
+    // background-color: rgba($color: rgb(33, 29, 29), $alpha: 0.4);
+    background-color: transparent;
+    border: 4px solid black;
+    
+    height: 320px;
+}
+
+.numberArticle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color: rgb(188, 118, 43), $alpha: 0.6);
+    width: 60%;
+    height: 10%;
+    margin-top: 15px;
+    border-radius: 50px;
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.totalPrice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color: rgb(188, 118, 43), $alpha: 0.6);
+    width: 60%;
+    height: 10%;
+    margin-top: 15px;
+    border-radius: 50px;
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.btnValidationCart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 8%;
+    border-radius: 50px;
+    border: none;
+    background-color: rgba($color: rgb(188, 118, 43), $alpha: 0.6);
+    color: white;
+    font-size: 15px;
+    font-weight:500;
+    margin-top: 100px;
+
+    a{
+        color: white;
+    }
+
+}
+
+.btnRedirectShop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 8%;
+    border-radius: 50px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    font-weight:500;
+    margin-top: 10px;
+
+    a{
+        color: white;
+    }
+}
+
+.trash{
+    cursor: pointer;
+}
