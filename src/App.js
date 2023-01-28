@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <PayPalScriptProvider >
+      {/* <PayPalScriptProvider > */}
       <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home />} />
@@ -35,7 +35,7 @@ function App() {
       </Routes>
       
       </BrowserRouter>
-      </PayPalScriptProvider>
+      {/* </PayPalScriptProvider> */}
     </div>
   );
 }

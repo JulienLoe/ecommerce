@@ -3,22 +3,22 @@ import { useDispatch, useSelector } from 'react-redux';
 import iconUserOrder from '../Icons/iconUserOrder.png'
 import iconAddress from '../Icons/iconAddress.png'
 import Navbar from '../Components/Navbar';
-import { orderPost } from '../features/orderSlice';
-import { resetCart } from '../features/dataCartSlice';
+// import { orderPost } from '../features/orderSlice';
+// import { resetCart } from '../features/dataCartSlice';
 import { getOrderPay } from '../features/orderPaySlice';
 import { useParams } from 'react-router-dom';
-import axios from 'axios';
-import { PayPalButtons } from '@paypal/react-paypal-js';
+// import axios from 'axios';
+// import { PayPalButtons } from '@paypal/react-paypal-js';
 
 const PageOrder = (props) => {
     
     const order = useSelector((state)=>state.orderPay.order.product)
     console.log(order)
-    const cart = useSelector((state)=>state.cart.cart)
+    // const cart = useSelector((state)=>state.cart.cart)
     const dispatchInfo = useSelector((state)=>state.cart.dispatch)
-    const user = useSelector((state)=>state.user.user)
-    const id = useSelector((state)=>state.user.user._id)
-    const validation = useSelector((state)=>state.order.order.user)
+    // const user = useSelector((state)=>state.user.user)
+    // const id = useSelector((state)=>state.user.user._id)
+    // const validation = useSelector((state)=>state.order.order.user)
     const dispatch = useDispatch();
     // // const elementPrice = order.reduce((a,b)=> a + b.quantity * b.price,0 ).toFixed(2);
     // const tva = ((20/100) * elementPrice).toFixed(2);
@@ -28,9 +28,9 @@ const PageOrder = (props) => {
     const params = useParams();
     const paramsId = params.id;
 
-    const validationPaypal = async(e)=>{
-        e.preventDefault();
-    }
+    // const validationPaypal = async(e)=>{
+    //     e.preventDefault();
+    // }
     useEffect(()=>{
         // validationPaypal()
         dispatch(getOrderPay(paramsId))
