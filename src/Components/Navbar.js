@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import iconeSearch from '../Icons/iconSearch.png'
 import iconeBasket from '../Icons/iconsBasket2.png'
@@ -9,7 +9,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { logoutUser } from '../features/dataUserSlice';
 
 const Navbar = (props) => {
-    const [searchBar,  setSearchBar] = useState('')
     const user = useSelector((state)=>state.user.user);
     const dispatch = useDispatch();
     const location = window.location.href

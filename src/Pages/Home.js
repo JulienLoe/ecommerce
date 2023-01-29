@@ -1,17 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ReactPlayer from 'react-player';
-import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Navbar from '../Components/Navbar';
 import Video from '../Icons/video.mp4'
 
 
 const Home = () => {
-    const data = useSelector((state) => state.products.products)
-
-useEffect(() =>{
-    console.log(data)
-},[])
     return (
         <div>
             <div className='containerHome'>

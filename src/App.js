@@ -9,16 +9,12 @@ import PageRegister from './Pages/PageRegister';
 import PageDispatch from './Pages/PageDispatch';
 import PageOrder from './Pages/PageOrder';
 import PageOrderPay from './Pages/PageOrderPay';
-import { PayPalScriptProvider } from '@paypal/react-paypal-js';
-import { useState } from 'react';
 import PageContact from './Pages/PageContact';
 
-function App() {
-  const [paypal, setPaypal] = useState(null) 
+function App() { 
 
   return (
     <div className="App">
-      {/* <PayPalScriptProvider > */}
       <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home />} />
@@ -30,12 +26,11 @@ function App() {
         <Route path='/register' element={<PageRegister />} />
         <Route path='/dispatch' element={<PageDispatch />} />
         <Route path='/order' element={<PageOrder />} />
-        <Route path='/orderPay/:id' element={<PageOrderPay paypal={paypal} paypalId={(paypal)=>setPaypal(paypal)}/>} />
+        <Route path='/orderPay/:id' element={<PageOrderPay />} />
         <Route path='/contact' element={<PageContact />} />
       </Routes>
       
       </BrowserRouter>
-      {/* </PayPalScriptProvider> */}
     </div>
   );
 }

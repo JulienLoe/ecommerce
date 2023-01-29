@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getData } from '../features/dataProductsSlice';
 import Loading from '../loader/Loading';
@@ -12,7 +11,7 @@ const Grid = ({dataSearch}) => {
 
     const dataLoader = useSelector((state =>state.products))
 
-    const {loading, error} = dataLoader;
+    const {loading} = dataLoader;
 
     console.log(loading)
 
@@ -30,11 +29,11 @@ const Grid = ({dataSearch}) => {
     //           (error){console.log(error)}
     //       }
 
-         const postData = async ()=>{
-            const result = await axios.post('http://localhost:8080', {
-                name: 'Blouson', description: 'Un blouson au top', price: 79.99, numberInStock: 2, image: './Assets/photo1.jpg',size: 'M'
-            })
-            console.log(result)
+        //  const postData = async ()=>{
+        //     const result = await axios.post('http://localhost:8080', {
+        //         name: 'Blouson', description: 'Un blouson au top', price: 79.99, numberInStock: 2, image: './Assets/photo1.jpg',size: 'M'
+        //     })
+        //     console.log(result)
         //     try{if(result.status===200){
         //         getData();
         //     }
@@ -42,13 +41,13 @@ const Grid = ({dataSearch}) => {
         //  catch
         //     (error){console.log(error)}
          
-        }
+        // }
 
 
      
-       const [result, setResult]= useState([])
-        // const pict = []
-        console.log(result)
+    //    const [result, setResult]= useState([])
+    //     const pict = []
+    //     console.log(result)
          
         // const pictures = useCallback(()=>{for( let i=1; i<=20; i++){
         //     result.push({name: `./Assets/photo${i}.jpg`})

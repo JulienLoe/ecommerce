@@ -71,19 +71,7 @@ const PageOrder = (props) => {
                 </>)
             })):<p>Error</p>}
             <div className='btnOrderDiv'>
-            {/* <button className='btnOrderValidation' type='submit' onClick={validationPaypal}>ORDER</button> */}
-             {/* <PayPalButtons createOrder={(data,actions)=>{
-                return actions.order.create({
-                    purchase_units: [
-                        {
-                        amout: {
-                            value: order.total
-                        }
-                    }
-                    ]
-                })
-            }}/> */}
-            <buton className='btnRegister'>PAYPAL</buton>
+            <button>PAYPAL</button>
             </div>
             
         </div>
