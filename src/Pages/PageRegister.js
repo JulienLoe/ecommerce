@@ -18,7 +18,7 @@ const PageRegister = () => {
     const formRegister = async(e)=>{
         e.preventDefault();
         const user = {name, email, password}
-        const result = await axios.post('http://localhost:8080/user/register', user);
+        const result = await axios.post('https://ecommerce-api-8msr.onrender.com/user/register', user);
         if(result.status===200){
             try{
             console.log('Created user !')

@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const getOrderPay = createAsyncThunk('order/getOrderpay', async(id)=>{
-    const result = await axios.get(`http://localhost:8080/order/${id}`)
+    const result = await axios.get(`https://ecommerce-api-8msr.onrender.com/order/${id}`)
     if(result.status===200){
         console.log('ok')
         return result.data

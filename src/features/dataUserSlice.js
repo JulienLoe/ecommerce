@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const getDataUser = createAsyncThunk('user/getDataUser', async (paramsUser)=>{
-    const result = await axios.post('http://localhost:8080/user/login', {email: paramsUser[0], password: paramsUser[1]});
+    const result = await axios.post('https://ecommerce-api-8msr.onrender.com/user/login', {email: paramsUser[0], password: paramsUser[1]});
     if(result.status===200){
         console.log (result)
         return result.data

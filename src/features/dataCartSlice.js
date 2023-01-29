@@ -4,7 +4,7 @@ import axios from "axios";
 export const getDataCart = createAsyncThunk('cart/getDataCart',async(utilityParams) =>{
     // const {paramsId, quantity} = utilityParams
     console.log(utilityParams)
-    const result = await axios.get(`http://localhost:8080/products/${utilityParams[0]}`)
+    const result = await axios.get(`https://ecommerce-api-8msr.onrender.com/products/${utilityParams[0]}`)
 // console.log(quantity)
     if(result.status===200){
         return (

@@ -7,8 +7,6 @@ import Navbar from '../Components/Navbar';
 // import { resetCart } from '../features/dataCartSlice';
 import { getOrderPay } from '../features/orderPaySlice';
 import { useParams } from 'react-router-dom';
-// import axios from 'axios';
-// import { PayPalButtons } from '@paypal/react-paypal-js';
 
 const PageOrder = (props) => {
     

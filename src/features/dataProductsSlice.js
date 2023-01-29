@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const getData = createAsyncThunk('products/getData', async() =>{
-    const result = await axios.get('http://localhost:8080/products')
+    const result = await axios.get('https://ecommerce-api-8msr.onrender.com/products')
     if(result.status===200){
         console.log(result)
         return result.data
