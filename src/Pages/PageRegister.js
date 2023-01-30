@@ -44,7 +44,7 @@ const PageRegister = () => {
     },[user])
 
     return (
-        <div>
+        <div className='pageRegister'>
             <Navbar />
             <div className='containerLogin'>
                 <div className='formLogin' onSubmit={formRegister}>
