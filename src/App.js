@@ -18,7 +18,6 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <Router history={history}>
-      <Routes >
         <Route path='/' element={<Home />} />
         <Route path='/products' element={<Products />} />
         <Route path='/products/:id' element={<PageSingleProducts />} />
@@ -30,7 +29,6 @@ function App() {
         <Route path='/order' element={<PageOrder />} />
         <Route path='/orderPay/:id' element={<PageOrderPay />} />
         <Route path='/contact' element={<PageContact />} />
-      </Routes>
       </Router>
       
       </BrowserRouter>
