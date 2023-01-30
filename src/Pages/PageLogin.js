@@ -3,6 +3,7 @@ import Navbar from '../Components/Navbar';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getDataUser } from '../features/dataUserSlice';
+import history from '../history';
 
 const PageLogin = () => {
     const dispatch = useDispatch();
@@ -22,7 +23,8 @@ const PageLogin = () => {
 
     useEffect(()=>{
         if(user){
-            window.location.href = '/dispatch'
+            // window.location.href = '/dispatch'
+            history.push('/dispatch')
             localStorage.getItem('user') ? localStorage.getItem('user') : localStorage.setItem('user', JSON.stringify(user));
             console.log(user.user)
         }
