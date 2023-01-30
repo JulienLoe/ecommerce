@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import Navbar from '../Components/Navbar';
 import { getDataUser } from '../features/dataUserSlice';
 
@@ -10,6 +11,7 @@ const PageRegister = () => {
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
 
+    const history = useNavigate();
     const dispatch = useDispatch();
     const user = useSelector((state)=>state.user.user)
     const paramsUser = [];
@@ -35,7 +37,8 @@ const PageRegister = () => {
 
     useEffect(()=>{
         if(user){
-            window.location.href='/dispatch'
+            history('/dispatch')
+            // window.location.href='/dispatch'
             localStorage.getItem('user') ? localStorage.getItem('user') : localStorage.setItem('user', JSON.stringify(user));
         }
     },[user])

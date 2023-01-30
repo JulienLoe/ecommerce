@@ -5,8 +5,10 @@ import iconAddress from '../Icons/iconAddress.png'
 import Navbar from '../Components/Navbar';
 import { orderPost } from '../features/orderSlice';
 import { resetCart } from '../features/dataCartSlice';
+import { useNavigate } from 'react-router-dom';
 
 const PageOrder = () => {
+    const history = useNavigate();
     const cart = useSelector((state)=>state.cart.cart)
     console.log(cart)
     const dispatchInfo = useSelector((state)=>state.cart.dispatch)
@@ -29,7 +31,8 @@ const PageOrder = () => {
 
     useEffect(()=>{
         if(validation){
-            window.location.href = `orderPay/${id}`
+            history(`orderPay/${id}`)
+            // window.location.href = `orderPay/${id}`
             // localStorage.removeItem('cart');
         }
     },[validation, id])

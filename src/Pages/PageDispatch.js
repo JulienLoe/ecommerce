@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import Navbar from '../Components/Navbar';
 import { dipatchInfo } from '../features/dataCartSlice';
 
@@ -12,6 +13,7 @@ const [postalCode, setPostalCode] = useState('');
 const [phone, setPhone] = useState('');
 const [country, setCountry] = useState('');
 
+const history = useNavigate();
 const dispatchParams = {address, city, postalCode, phone, country} 
 
 const validationInfoDispatch = (e)=>{
@@ -19,7 +21,8 @@ const validationInfoDispatch = (e)=>{
     console.log(address)
     dispatch(dipatchInfo(dispatchParams));
     localStorage.setItem('dispatch', JSON.stringify(dispatchParams))
-    window.location.href = '/order'
+    history('/order');
+    // window.location.href = '/order'
     console.log(address)
 }
     return (
