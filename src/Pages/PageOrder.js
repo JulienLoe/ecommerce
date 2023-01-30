@@ -31,7 +31,7 @@ const PageOrder = () => {
 
     useEffect(()=>{
         if(validation){
-            history(`orderPay/${id}`, true)
+            history(`orderPay/${id}`, {replace: true})
             // window.location.href = `orderPay/${id}`
             // localStorage.removeItem('cart');
         }
