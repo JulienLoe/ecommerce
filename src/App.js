@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Router } from 'react-router-dom';
 import Home from './Pages/Home';
 import Products from './Pages/Products';
 import PageSingleProducts from './Pages/PageSingleProducts';
@@ -17,7 +17,8 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Routes history={history}>
+      <Router history={history}>
+      <Routes >
         <Route path='/' element={<Home />} />
         <Route path='/products' element={<Products />} />
         <Route path='/products/:id' element={<PageSingleProducts />} />
@@ -30,6 +31,7 @@ function App() {
         <Route path='/orderPay/:id' element={<PageOrderPay />} />
         <Route path='/contact' element={<PageContact />} />
       </Routes>
+      </Router>
       
       </BrowserRouter>
     </div>
