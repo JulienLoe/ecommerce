@@ -10,14 +10,13 @@ import PageDispatch from './Pages/PageDispatch';
 import PageOrder from './Pages/PageOrder';
 import PageOrderPay from './Pages/PageOrderPay';
 import PageContact from './Pages/PageContact';
-import history from './history';
 
 function App() { 
 
   return (
     <div className="App">
-      <BrowserRouter history={history}>
-      <Routes >
+      <BrowserRouter>
+      <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/products' element={<Products />} />
         <Route path='/products/:id' element={<PageSingleProducts />} />

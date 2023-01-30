@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '../Components/Navbar';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getDataUser } from '../features/dataUserSlice';
-import history from '../history';
 
 const PageLogin = () => {
+    const history = useNavigate();
     const dispatch = useDispatch();
     const user = useSelector((state)=>state.user.user)
     const [email, setEmail] = useState('');
@@ -24,7 +24,7 @@ const PageLogin = () => {
     useEffect(()=>{
         if(user){
             // window.location.href = '/dispatch'
-            history.push('/dispatch')
+            history.navigate('/dispatch')
             localStorage.getItem('user') ? localStorage.getItem('user') : localStorage.setItem('user', JSON.stringify(user));
             console.log(user.user)
         }
