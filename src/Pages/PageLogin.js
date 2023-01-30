@@ -24,7 +24,7 @@ const PageLogin = () => {
     useEffect(()=>{
         if(user){
             // window.location.href = '/dispatch'
-            history.navigate('/dispatch')
+            history('/dispatch')
             localStorage.getItem('user') ? localStorage.getItem('user') : localStorage.setItem('user', JSON.stringify(user));
             console.log(user.user)
         }
