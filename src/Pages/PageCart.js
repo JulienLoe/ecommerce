@@ -55,7 +55,7 @@ const PageCart = () => {
                     <select className='selectSingle' value={element.quantity} onChange={(e) =>getQuantity(e,element.idProduct)}>
                         {[...Array(element.numberInStock).keys()].map((element)=><option key={element+1} value={element + 1}>{element + 1}</option>)}
                     </select>
-                    <div>{element.quantity * element.price + ' €'}</div>
+                    <div>{(element.quantity * element.price).toFixed(2) + ' €'}</div>
                     <i onClick={(e)=>deleteClickCart(e,element.idProduct)}><img className='trash' alt={element.name} src={iconTrash}/></i>
                 </div>
                 </>)

@@ -66,7 +66,7 @@ const PageOrder = () => {
                         <img src={'.' + element.image} alt={element.name}/>
                     </div>
                     <div className='elementCart'><h1>{element.name}</h1><h3>{element.size}</h3><h3>{element.price + ' €'}</h3><h3>{element.quantity}</h3></div>
-                    <div>{element.quantity * element.price + ' €'}</div>
+                    <div>{(element.quantity * element.price).toFixed(2) + ' €'}</div>
                 </div>
                 </>)
             })}
